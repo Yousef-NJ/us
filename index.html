@@ -34,9 +34,11 @@
       }
       .bg-y {
         background-color: #cdf0ea;
+        animation: slide-right 2s ease-in;
       }
       .bg-s {
         background-color: #faebe0;
+        animation: slide-left 2s ease-in;
       }
       @media screen and (max-width: 530px) {
         .circle {
@@ -44,6 +46,28 @@
           height: 260px;
           width: 260px;
         }
+      }
+      @keyframes slide-left {
+        0% {
+          transform: translateX(-500px);
+        }
+        1000% {
+          transform: translateX(0px);
+        }
+      }
+      @keyframes slide-right {
+        0% {
+          transform: translateX(500px);
+        }
+        1000% {
+          transform: translateX(0px);
+        }
+      }
+      .border1 {
+        border: 2px solid #faebe0;
+      }
+      .border2 {
+        border: 2px solid #cdf0ea;
       }
     </style>
   </head>
@@ -61,12 +85,51 @@
         >
       </div>
       <div class="col-lg-6 bg-s w-100 text-center pt-5 py-5 px-0">
-        <img src="images/me4444.jpg" alt="" class="circle" />
+        <img src="images/me-s.jpg" alt="" class="circle" />
         <div class="h3 mt-4">Sondos Marashdeh</div>
         <p>frontend developer</p>
         <a href="https://ssondoss.github.io/me/" target="_blank">
           <button class="btn btn-dark px-5 py-2 mt-4">Explore My CV</button></a
         >
+      </div>
+    </div>
+
+    <div class="py-5 my-4 text-center">
+      <h2>Some of Our Projects</h2>
+      <div class="row mx-0 mt-5">
+        <div class="col-6">
+          <h4>Personal Projects</h4>
+          <div class="row mx-0">
+            <div class="col-4 px-2">
+              <div class="border">
+                <div class="card-body">
+                  <h5 class="card-title">anardes</h5>
+                  <p class="card-text">educational platform</p>
+                </div>
+                <div class="border-top p-2">
+                  <button class="btn btn-dark w-100">explore</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="border">
+                <div class="card-body">
+                  <h5 class="card-title">anardes</h5>
+                  <p class="card-text">educational platform</p>
+                </div>
+                <div class="border-top p-2">
+                  <button class="btn btn-dark w-100">explore</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 p-4">
+          <h4>Customers Projects</h4>
+          <div class="border1 p-4 mt-4">
+            <div class="border p-4"></div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
